@@ -30,18 +30,6 @@ class DatabaseSession:
             yield session
 
 
-# Создаем экземпляр для удобного импорта
+
 db = DatabaseSession()
 
-# Примеры использования в роутах:
-"""
-@router.get("/items")
-async def get_items(session: AsyncSession = Depends(db.get_db)):
-    # Используем сессию без автоматического коммита
-    ...
-
-@router.post("/items")
-async def create_item(session: AsyncSession = Depends(db.get_db_with_commit)):
-    # Используем сессию с автоматическим коммитом
-    ...
-"""
