@@ -8,9 +8,9 @@ from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.orm import joinedload
 
-from app.api.schemas import BookingSlot
-from app.dao.base import BaseDAO
-from app.dao.models import User, Specialization, Doctor, Booking
+from api.schemas import BookingSlot
+from database.base import BaseDAO
+from database.models import User, Specialization, Doctor, Booking
 
 
 class UserDAO(BaseDAO[User]):
